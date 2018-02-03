@@ -48,6 +48,9 @@ function createTocMarkup(headers) {
 }
 
 function writeTocToDocument(document) {
+    // I was only interested in the headers within the element that had the .post-content class,
+    // which is specific to the Ghost blog. If you're using this elsewhere, or are interested in
+    // the entire document, delete this line and use document.querySelectorAll(...) on the next line.
     var body = document.getElementsByClassName('post-content')[0];
     
     // Add or remove header tags you do (or don't) want to include in the TOC
