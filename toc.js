@@ -56,7 +56,9 @@ function getTocMarkup(document) {
     // Add or remove header tags you do (or don't) want to include in the TOC
     var headers = body.querySelectorAll('h2, h3, h4, h5, h6');
 
-    if (headers.length > 1) {
+    // Change the number to 1 if you want headers no matter what.
+    // Or if you want at least 3 headers before generating a TOC, change it to 3.
+    if (headers.length >= 2) {
         return createTocMarkup(headers);
     } else {
         return "";
