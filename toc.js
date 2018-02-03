@@ -47,7 +47,7 @@ function createTocMarkup(headers) {
     return output;
 }
 
-function writeTocToDocument(document) {
+function getTocMarkup(document) {
     // I was only interested in the headers within the element that had the .post-content class,
     // which is specific to the Ghost blog. If you're using this elsewhere, or are interested in
     // the entire document, delete this line and use document.querySelectorAll(...) on the next line.
@@ -57,6 +57,8 @@ function writeTocToDocument(document) {
     var headers = body.querySelectorAll('h2, h3, h4, h5, h6');
 
     if (headers.length > 1) {
-        document.write(createTocMarkup(headers));
+        return createTocMarkup(headers);
+    } else {
+        return "";
     }
 }
