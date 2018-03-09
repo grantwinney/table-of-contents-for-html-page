@@ -41,7 +41,7 @@ function createTocMarkup(headers) {
             output += "</li></ol>";
             prevLevel -= 1;
         }
-        output = `<h2 class="widget-title">Table of Contents</h2><div style="margin-left:-10px">${output}</div>`;
+        output = `<h2 class="widget-title">Table of Contents</h2>${output}`;
     }
 
     return output;
