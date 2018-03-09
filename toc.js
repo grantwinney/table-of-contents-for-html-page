@@ -1,5 +1,5 @@
 /**
- * For displaying a table of contents - pass the entire document (DOM) to writeTocToDocument
+ * For displaying a table of contents - pass the entire document (DOM) to getTocMarkup
  */
 
 function getHeaderLevel(header) {
